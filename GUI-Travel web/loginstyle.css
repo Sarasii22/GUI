@@ -53,7 +53,7 @@ header{
   height: 10vh;
   position: fixed;
   top: 10px;
-  left: 500px;
+  left: 510px;
   margin: 10px 0px 0px 100px;
   display: flex;
   align-items: center;
@@ -97,51 +97,37 @@ header{
   list-style: none;
 }
 
-.explain{
-  color: var(--primary-color1);
-  font-size: 2rem;
-  position: absolute;
-  top: 150px;
-  left: 330px;
-  text-shadow: #050505  0px 0px 10px;
-  padding: 10px 10px;
-  margin: auto;
-  text-align: center;
-  /*font-family: "Arima Madurai";
-  font-weight: 350;*/
-  font-family: "arima"	;
-  font-weight: 200;
-  font-style: bold;
-  display: flex;              /* Enable flexbox */
-  justify-content: center;    /* Horizontally center */
-  align-items: center;       /* Vertically center */
- /* min-height: 100vh;  */
-  text-transform: capitalize;
-  line-height: 4rem;
-  
-}
-
-.highlight{
-  color: var(--primary-color2);
-}
-
-.search-box{
+.username-box {
   position: absolute; /* make the search box absolute*/
-  top: 320px; 
+  top: 70px; 
   left: 50%;
   transform: translate(-50%, -50%); /* make the search box center*/
   background: var(--primary-color1) ;
-  width: 50%;  
+  width: 80%;  
   height: 35px;
   border-radius: 15px;
+  z-index: 1000;
+  border: var(--border-color) 1px solid;
 }
 
-.search-box input{
+.password-box {
+  position: absolute; /* make the search box absolute*/
+  top: 140px; 
+  left: 50%;
+  transform: translate(-50%, -50%); /* make the search box center*/
+  background: var(--primary-color1) ;
+  width: 80%;  
+  height: 35px;
+  border-radius: 15px;
+  border: var(--border-color) 1px solid;
+  z-index: 1000;
+  opacity: 100%;
+}
+
+.username-box input{
   padding: 8px 15px;
   width: 100%;
   border-radius: 15px;
-  top: 335px;
-  left: 65%;
   border: none; /* remove the border*/
   outline: none; /* remove the outline*/
   background: var(--primary-color1);
@@ -149,20 +135,55 @@ header{
   color: var(--text-color); 
 }
 
-.search-box input::placeholder{
+.password-box input{
+  padding: 8px 15px;
+  width: 100%;
+  border-radius: 15px;
+  border: none; /* remove the border*/
+  outline: none; /* remove the outline*/
+  background: var(--primary-color1);
+  font-size: 16px;
+  color: var(--text-color); 
+}
+
+.username-box input::placeholder{
   padding: auto;
   top: 335px;
   right: 90%;
-  font-size: 18 px;
-  font-weight: 500;
+  font-size: 12 px;
+  font-weight: 400;
   color: var(--text-color); 
   opacity: 0.5;
 }
 
+.password-box input::placeholder{
+  padding: auto;
+  top: 375px;
+  right: 90%;
+  font-size: 12 px;
+  font-weight: 400;
+  color: var(--text-color); 
+  opacity: 0.5;
+}
+
+.login-box{
+  border: #050505;
+  border-radius: none;
+  position: absolute;
+  top: 280px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 280px;
+  background: var(--border-color);
+  z-index: 100;
+  opacity: 75%;
+}
+
 .login-btn {
   position: absolute;
-  top: 385px;
-  left: 50%;
+  top: 220px;
+  left: 49%;
   transform: translate(-50%, -50%);
   margin: 10px;
   padding: 10px 20px;
@@ -170,7 +191,7 @@ header{
   border: none;
   border-radius: none;
   cursor: pointer;
-  
+  opacity: 100%;
   font-weight: 600;
 }
 
@@ -178,24 +199,23 @@ header{
   background-color: var(--button-hover1);
 }
 
-.features {
+h4{
   position: absolute;
-  top: 430px;
-  left: 40px;
-  margin: 20px 0;
-  font-size: 18px;
-  
+  bottom: 80px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 10px;
+  padding: 10px 20px;
+  font-weight: 500;
+  color: var(--primary-color1); 
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
-.features li {
-  list-style: circle;
-  color: var(--primary-color1);
-}
-
-.explore-btn {
+.signup-btn {
   position: absolute;
-  top: 525px;
-  right: 2px;
+  bottom: 35px;
+  left: 50%;
   transform: translate(-50%, -50%);
   margin: 10px;
   padding: 10px 30px;
@@ -203,22 +223,9 @@ header{
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  
   font-weight: 600;
 }
 
-.explore-btn:hover {
+.signup-btn:hover {
   background-color: var(--button-hover2);
-}
-
-body{
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--light-color);
-  color: var(--dark-color);
-}
-
-.container{
-  max-width: 960px;
-  margin: 0 auto;
-
 }
